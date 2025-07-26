@@ -11,7 +11,6 @@ app.listen(port,()=>{
     console.log(`server at http://localhost:${port}`);
 })
 
-// get a list of 5 jokes
 app.get('/api/jokes',(req,res)=>{
     const jokes = [
         {
@@ -20,11 +19,6 @@ app.get('/api/jokes',(req,res)=>{
             content:"This is a joke"
         },
 
-        {
-            id:1,
-            title:"A Joke",
-            content:"This is a joke"
-        },
         {
             id:2,
             title:"Another Joke",
@@ -39,7 +33,12 @@ app.get('/api/jokes',(req,res)=>{
             id:4,
             title:"This is Forth Joke",
             content:"This is forth joke hahahahahahahhahahah",
-        }
+        },
+        {
+            id:5,
+            title:"This is fifth joke",
+            content:"this is fifth joke",
+        },
     ]
     res.send(jokes)
 })
